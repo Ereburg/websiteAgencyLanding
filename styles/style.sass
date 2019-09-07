@@ -1,0 +1,588 @@
+$primary-color: #ff3f40
+$complimentary-color: #312f30
+$bg-light: #f6f2f1
+$text-white: #e0e0e0
+$regular-text: #737373
+
+%heading
+    margin: 0
+    font-size: 42px
+    font-weight: 700
+    text-transform: uppercase
+    color: $complimentary-color
+
+%section--text
+    position: relative
+    margin: 30px 0 0
+    padding-bottom: 50px
+    font-size: 16px
+    line-height: 28px
+    color: $regular-text
+
+%section-line
+    content: ''
+    position: absolute
+    bottom: 0px
+    width: 100%
+    max-width: 130px
+    height: 2px
+    background-color: $primary-color
+
+%container
+    max-width: 1280px
+    margin: 0 auto
+    padding: 0 15px
+
+%formButton
+    padding: 21px 62px
+    background-color: $primary-color
+    border: none
+    border-radius: 5px
+    font-size: 18px
+    font-weight: 700
+    text-transform: uppercase
+    color: #fff
+    transition: .5s ease
+
+%formButton--hover
+    background-color: $bg-light
+    color: $primary-color
+
+%form-background
+    background-color: #e5e5e5
+    border: none
+    border-radius: 15px
+        
+// Стили документа 
+
+body
+    font-family: 'Open Sans', sans-serif
+    // background: url('../Agnecy Landing Page_Main File.jpg') center center no-repeat
+    
+.header--container,
+.footer--container
+    @extend %container
+
+.header--background-light
+    background-color: $bg-light
+    
+.navigation--dark,
+.footer--background-dark
+    background-color: $complimentary-color
+    color: $text-white
+
+// общие стили для всех элементов
+a
+    color: inherit
+
+.features__video[poster]
+    height: 100%
+    width: 100%
+
+main
+    overflow: hidden
+
+.visually-hidden
+    visually: hidden
+    position: absolute
+    width: 1px
+    height: 1px
+    margin: -1px
+    border: 0
+    padding: 0
+    clip: rect (0 0 0 0)
+    overflow: hidden
+// Конец общих стилей
+
+.header
+    padding: 29px 0 0 0
+    
+    .menu-list
+        display: flex
+        justify-content: center
+        margin: 0 auto
+        padding: 0
+        list-style-type: none
+
+    .menu-list__item
+        display: flex
+        align-items: center
+        justify-content: center
+
+    .menu-list__link
+        padding: 40px 24px 34px
+        font-size: 14px 
+        font-weight: 700
+        text-decoration: none
+        text-transform: uppercase
+        cursor: pointer
+
+        &:hover,
+        &:focus
+            background-color: $primary-color
+
+    .features--layout
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        flex-wrap: wrap
+        padding: 110px 0 110px
+
+    .features__title
+        margin: 0
+        font-size: 60px
+        font-weight: 900
+        letter-spacing: 2px
+        text-transform: uppercase
+        
+    .features__text-layout
+        max-width: 615px
+
+    .features__video
+        max-width: 540px
+        // max-height: 360px
+        width: 100%
+        height: 360px
+        border-radius: .2%
+        box-shadow: 0px 14px 73px 0px rgba(0, 0, 0, 0.295)
+
+    .features__description
+        max-width: 505px
+        font-size: 16px
+        line-height: 28px
+        color: #6f6d6d
+        word-wrap: break-word
+
+    .features__button
+        margin-top: 46px
+        padding: 21px 62px
+        background-color: $primary-color
+        border: 2px solid $primary-color
+        border-radius: 5px
+        font-size: 18px
+        font-weight: 600
+        text-transform: capitalize
+        color: #fff
+
+        &:hover,
+        &:focus
+            background-color: $bg-light
+            color: $primary-color
+
+@media screen and ( max-width: 1120px )
+    .header
+        .features
+            flex-direction: column
+            align-items: center
+            justify-content: center
+
+        .features__text-layout
+            max-width: 550px
+            text-align: center
+
+        .features__description
+            margin: 24px 0 0
+            max-width: 100%
+
+        .features__video
+            margin-top: 68px
+
+
+// Main section
+
+.services--layout
+    position: relative
+    display: flex
+    justify-content: space-between
+    padding: 110px 0
+    color: $regular-text
+    @extend %container
+
+    &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        width: 100%
+        height: 2px
+        background-color: #ececec
+
+.services__text-layout
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    flex-basis: 550px
+    max-width: 550px
+    width: 100%
+
+    .services__headline
+        @extend %heading
+
+    .services__description
+        margin: 40px 0 0
+        font-size: 16px
+        line-height: 28px
+
+    .services__button
+        margin: 55px 0 0 0
+        padding: 20px 10px
+        max-width: 226px
+        width: 100%
+        background-color: #fff
+        font-size: 18px
+        font-weight: 700
+        color: $primary-color
+        border: 2px solid $primary-color
+        border-radius: 5px
+        
+        &:hover,
+        &:focus
+            background-color: $primary-color
+            color: #fff
+
+.services-list
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+    flex-basis: calc( 100% - 550px )
+    margin: 0 0 0 100px
+    padding: 0
+    list-style-type: none
+
+    &__item
+        width: calc( 50% - 20px )
+        margin-bottom: 50px
+
+        &:not(:nth-child(1)):not(:nth-child(2))
+            margin-bottom: 0
+
+    &__item:nth-child(2n+1)
+        margin-right: 40px
+
+    .fas,
+    .far
+        font-size: 40px
+        color: $primary-color
+
+    &__headline
+        // margin: 30px 0 10px
+        font-size: 24px
+        font-weight: 600
+
+    &__text
+        font-size: 16px
+        line-height: 28px
+        font-weight: 400
+
+// Portfolio
+
+.portfolio--layout
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 110px 0
+    @extend %container
+
+    .portfolio__headline
+        @extend %heading
+
+    .portfolio__text
+        @extend %section--text
+        width: 520px
+        text-align: center
+
+        &::after
+            @extend %section-line
+            left: 50%
+            transform: translateX(-50%)
+
+    .toggles
+        display: flex
+        justify-content: center
+        margin: 70px 0 50px
+        padding: 0
+        list-style-type: none
+
+        &__button
+            padding: 5px 10px
+            margin: 5px
+            font-size: 22px
+            font-weight: 600
+            text-transform: uppercase
+            color: $regular-text
+            border: none
+            border-radius: 5px
+            background-color: transparent
+            cursor: pointer
+
+            &:hover,
+            &:focus
+                box-shadow: 0px 0px 5px 1px #e02d2d
+
+            &--active
+                color: $primary-color
+
+    .posts
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+        margin: 0
+        padding: 0
+        min-height: 350px
+        list-style-type: none
+
+        &__link
+            position: relative
+            display: block
+            width: 300px
+            height: 300px
+            margin: 10px
+            border-radius: 5px
+            box-shadow: 0px 5px 15px #0000003b
+            transition: .5s ease
+            overflow: hidden
+
+        &__image
+            width: 100%
+            height: 100%
+            object-fit: contain
+            transition: .5s ease
+
+            &:hover,
+            &:focus
+                transform: scale(1.2)
+
+
+.team--layout
+    display: flex
+    flex-direction: column
+    padding-bottom: 110px
+    @extend %container
+
+    .team__headline
+        @extend %heading
+
+    .team__text
+        @extend %section--text
+        width: 520px
+
+        &::after
+            @extend %section-line
+            left: 0
+
+
+.subscribe__layout
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 140px 15px
+    background: url('../images/subscribe-bg.jpg') center no-repeat
+    background-size: cover
+    text-align: center
+
+    .subscribe__headline
+        margin: 20px 0 42px
+        font-size: 42px
+        font-weight: 600
+        color: #ffffff
+
+        .subscribe__subheading
+            display: block
+            margin-top: 20px
+            font-size: 16px
+            font-weight: normal
+            line-height: 26px
+            color: #ffffffd2
+
+    .subscribe-form
+        display: flex
+        justify-content: center
+        align-items: center
+        max-width: 850px
+        width: 100%
+
+        &__item
+            flex-basis: 520px
+            margin: 0 20px 0 0
+            max-width: 520px
+            width: 100%
+            height: 100%
+            box-sizing: border-box
+
+        &__email
+            padding: 20px 15px
+            margin-bottom: 20px
+            width: 100%
+            height: 100%
+            font-size: 16px
+            color: $regular-text
+            border-radius: 5px
+            border: none
+            box-sizing: border-box
+
+            &:focus
+                background-color: #fdfcfc
+
+        &__button
+            @extend %formButton
+            margin-bottom: 20px
+
+            &:focus,
+            &:hover
+                @extend %formButton--hover
+
+.contacts 
+    @extend %container
+    padding-top: 110px
+    padding-bottom: 110px
+
+    &__headline
+        @extend %heading
+
+    &__text
+        @extend %section--text
+        max-width: 740px
+        width: 100%
+        margin-bottom: 70px
+
+        &::after
+            @extend %section-line
+            left: 0
+
+
+    &-content-layout
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: center
+
+    &-form
+        max-width: 740px
+        width: 100%
+
+        &__item
+            margin: 0
+            
+        &__item--top
+            display: flex
+            justify-content: space-between
+            width: 100%
+
+        &__input
+            @extend %form-background
+            padding: 25px 50px
+            flex-basis: calc((50% / 2) - 5px)
+            flex-grow: 1
+
+        &__name
+            margin-right: 40px
+
+        &__user-message
+            @extend %form-background
+            margin: 45px 0
+            width: 100%
+            padding: 30px 50px
+            box-sizing: border-box
+
+        &__button
+            @extend %formButton
+            width: 100%
+
+            &:focus,
+            &:hover
+                @extend %formButton--hover
+                color: $complimentary-color
+    &-info
+        position: relative
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: center
+        height: 463px
+        padding: 15px 15px 15px 70px
+        background-color: $complimentary-color
+        color: #ffffff
+        box-sizing: border-box
+
+        &__headline
+            position: relative
+            z-index: 2
+            font-size: 18px
+            font-weight: 700
+            line-height: 28px
+            text-transform: uppercase
+        
+        &__list
+            position: relative
+            z-index: 2
+            padding: 0
+            margin: 0
+            font-size: 16px
+            line-height: 24px
+            list-style-type: none
+        
+        &__item 
+            margin: 20px 0
+
+        &__link
+            text-decoration: none
+
+        &::after
+            z-index: 1
+            position: absolute
+            left: 0%
+            content: ''
+            height: 100%
+            width: 100vw
+            background-color: $complimentary-color
+
+
+    
+
+// Footer section
+.footer--container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 40px
+    padding-bottom: 15px
+
+    .copyright 
+        font-size: 16px
+        line-height: 26px
+
+        .fas 
+            color: $primary-color
+
+    
+.social-links
+    display: flex
+    justify-content: space-around
+    flex-basis: 200px
+    padding: 0
+    list-style-type: none
+
+    &__item
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 50%
+
+        .social-links__link
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 40px
+            height: 40px
+            border-radius: 50%
+            background: $text-white
+            font-size: 20px
+            color: $complimentary-color
+            text-decoration: none
+                
+            &:hover,
+            &:focus
+                background-color: $primary-color
+                color: $text-white

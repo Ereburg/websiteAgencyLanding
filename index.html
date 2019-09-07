@@ -9,52 +9,60 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9021eac6a4.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
 
-    <header class="header">
-        <nav class="navigation">
-            <ul class="menu-list">
-                <li class="menu-list__item">
-                    <a href="#" class="menu-list__link">Home</a>
-                </li>
-                <li class="menu-list__item">
-                    <a href="#" class="menu-list__link">Portfolio</a>
-                </li>
-                <li class="menu-list__item">
-                    <a href="#" class="menu-list__link">About us</a>
-                </li>
-                <li class="menu-list__item">
-                    <a href="#" class="menu-list__link">Contact</a>
-                </li>
-            </ul>
-        </nav>
+    <header class="header  header--background-light">
+        <div class="header--container">
+            <nav class="navigation navigation--dark">
+                <ul class="menu-list ">
+                    <li class="menu-list__item">
+                        <a href="#" class="menu-list__link menu-list__link--active">Home</a>
+                    </li>
+                    <li class="menu-list__item">
+                        <a href="#portfolio" class="menu-list__link">Portfolio</a>
+                    </li>
+                    <li class="menu-list__item">
+                        <a href="#aboutUs" class="menu-list__link">About us</a>
+                    </li>
+                    <li class="menu-list__item">
+                        <a href="#contacts" class="menu-list__link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <section class="features features--layout">
+                <div class="features__text-layout">
+                    <h1 class="features__title">Our strong organization</h1>
+                    <p class="features__description">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus quod corrupti cum nam eos
+                        laborum nostrum quae, repellendus saepe voluptatibus? Ad praesentium maiores, quasi vitae quia
+                    </p>
+                    <button class="features__button" type="button">Contact us</button>
+                </div>
+                <!-- <video class="features__video" src="images/particleything.mp4" aria-label="Video about our company"
+                    controls></video> -->
+                <video class="features__video" playsinline="playsinline" controls loop="loop"
+                    aria-label="Video about our company" poster="images/video.jpg">
+                    <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+                    Your Browser doesn't supports this video
+                </video>
+            </section>
+        </div>
+
     </header>
 
     <main class="main">
 
-        <section class="features">
-            <div class="features__text-layout">
-                <h1 class="features__title">Our strong organization</h1>
-                <p class="features__description">
-                    Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore
-                    et. ectetur adig ipis cing elit, sed do eiusmod tempor incididunt.
-                </p>
-                <button class="features__button" type="button">Contact us</button>
-            </div>
-            <video src="images/particleything.mp4" class="features__video" aria-label="Video about our company"
-                controls></video>
-        </section>
-
-        <section class="services">
+        <section class="services services--layout">
             <h2 class="visually-hidden">Our Services</h2>
             <div class="services__text-layout">
                 <p class="services__headline">do you know we can provide for you ?</p>
                 <p class="services__description">
-                    Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore
-                    et. Lorem ni ipsum dolor sit amet, consectetur adipis cing elit, ed doi eiusmod tempor
-                    incididunt ut labore et.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, dolorum enim? Temporibus, excepturi
+                    delectus similique conse quuntur cupiditate esse velit a ab ex obcaecati soluta. Porro, nesciunt
+                    voluptate! Aliquid, qui adipisci.
                 </p>
                 <button class="services__button" type="button">Learn More</button>
             </div>
@@ -63,80 +71,129 @@
                     <i class="fas fa-cog"></i>
                     <h3 class="services-list__headline">Management</h3>
                     <p class="services-list__text">
-                        Lorem ipsum dolor sitea amet, zixf conseit adipi cing elit, seddi do eiusmod btdempor in didunt
-                        utlae ore etioe.Lorem ipsum new idolor
-
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nemo numquam alias eveniet,
+                        voluptas ducimus quos aut. Repellendus, consectetur earum. Lorem ipsum dolor sit.
                     </p>
                 </li>
                 <li class="services-list__item">
                     <i class="fas fa-pencil-alt"></i>
                     <h3 class="services-list__headline">UI /UX Design</h3>
                     <p class="services-list__text">
-                        Lorem ipsum dolor sitea amet, zixf conseit adipi cing elit, seddi do eiusmod btdempor in didunt
-                        utlae ore etioe.Lorem ipsum new idolor sit amet
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum animi veritatis aliquid velit.
+                        Eum odio alias voluptas aspernatur maiores. Voluptatibus minima molestias natus consectetur
+                        debitis.
                     </p>
                 </li>
                 <li class="services-list__item">
                     <i class="far fa-gem"></i>
                     <h3 class="services-list__headline">Logo / Branding</h3>
                     <p class="services-list__text">
-                        Lorem ipsum dolor sitea amet, zixf conseit adipi cing elit, seddi do eiusmod btdempor in didunt
-                        utlae ore etioeew idolor sit amet
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, minima aliquid velit
+                        officia sequi nesciunt sint esse. Repellendus, consectetur earum. Repellendus, consectetur
+                        earum.
                     </p>
                 </li>
                 <li class="services-list__item">
                     <i class="fas fa-shuttle-van"></i>
                     <h3 class="services-list__headline">Animation</h3>
                     <p class="services-list__text">
-                        Lorem ipsum dolor sitea amet, zixf conseit adipi cing elit, seddi do eiusmod btdempor in didunt
-                        utlae ore etioeew idolor sit amet
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati saepe, ducimus facere
+                        similique consequuntur suscipit, veniam iure voluptatibus ipsa nemo labore nam, quod omnis!
                     </p>
                 </li>
             </ul>
         </section>
 
-        <section class="portfolio">
+        <section class="portfolio portfolio--layout" id="portfolio">
             <h2 class="portfolio__headline">feature products</h2>
             <p class="portfolio__text">
-                Lorem ipsum dolor sit amet, consectetur adipis cing elit,sed do eiusmod tempor
-                incididunt ut labore et.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cum maxime laborum pariatur!
+                Porro reiciendis deserunt recusandae iusto, culpa quos?
             </p>
 
-            <div class="toggles">
-                <button class="toggles__button toggles__button--all" id="toggles__button--all"
-                    type="button">All</button>
-                <button class="toggles__button toggles__button--print" id="toggles__button--print" type="button">print
-                    template</button>
-                <button class="toggles__button toggles__button--web" id="toggles__button--web" type="button">web
-                    template</button>
-                <button class="toggles__button toggles__button--ui" id="toggles__button--ui" type="button">user
-                    interface</button>
-                <button class="toggles__button toggles__button--mockup" id="toggles__button--mockup"
-                    type="button">mock-up</button>
-            </div>
+            <ul class="toggles">
+                <li class="toggles__item">
+                    <button class="toggles__button toggles__button--all toggles__button--active"
+                        id="toggles__button--all" type="button" aria-label="Show All Projects Types">All</button>
+                </li>
+                <li class="toggles__item">
+                    <button class="toggles__button toggles__button--print" id="toggles__button--print" type="button"
+                        aria-label="Show print template Projects">print template</button>
+                </li>
+                <li class="toggles__item">
+                    <button class="toggles__button toggles__button--web" id="toggles__button--web" type="button"
+                        aria-label="Show web design Projects">web template</button>
+                </li>
+                <li class="toggles__item">
+                    <button class="toggles__button toggles__button--ui" id="toggles__button--ui" type="button"
+                        aria-label="Show user interface Projects">user interface</button>
+                </li>
+                <li class="toggles__item">
+                    <button class="toggles__button toggles__button--mockup" id="toggles__button--mockup" type="button"
+                        aria-label="Show mock-up Projects">mock-up</button>
+                </li>
+            </ul>
 
-            <div class="posts">
-                <div class="posts__item toggles__button--all"><img src="" alt="">a</div>
-                <div class="posts__item toggles__button--all"><img src="" alt="">b</div>
-                <div class="posts__item toggles__button--print"><img src="" alt="">c</div>
-                <div class="posts__item toggles__button--all"><img src="" alt="">d</div>
-                <div class="posts__item toggles__button--print"><img src="" alt="">e</div>
-                <div class="posts__item toggles__button--web"><img src="" alt="">f</div>
-                <div class="posts__item toggles__button--ui"><img src="" alt="">g</div>
-                <div class="posts__item toggles__button--mockup"><img src="" alt="">h</div>
-            </div>
+            <ul class="posts">
+                <li class="posts__item toggles__button--print">
+                    <a class="posts__link" href="#" aria-label="Print project beauty cup">
+                        <img class="posts__image" src="images/print1.jpg" alt="Print project beauty cup">
+                    </a>
+                </li>
+                <li class="posts__item toggles__button--print" aria-label="Print project in various items">
+                    <a class="posts__link" href="#">
+                        <img class="posts__image" src="images/print2.jpg" alt="Print project in various items">
+                    </a>
+                </li>
+                <li class="posts__item toggles__button--print" aria-label="Print project on notebook">
+                    <a class="posts__link" href="#">
+                        <img class="posts__image" src="images/print3.jpg" alt="Print project on notebook">
+                    </a>
+                </li>
+                <li class="posts__item toggles__button--web" aria-label="Web design project charity website">
+                    <a class="posts__link" href="#">
+                        <img class="posts__image" src="images/web1.jpg" alt="Web design project charity website">
+                    </a>
+                </li>
+                <li class="posts__item toggles__button--web" aria-label="Web design project for insurance website">
+                    <a class="posts__link" href="#">
+                        <img class="posts__image" src="images/web2.jpg" alt="Web design project for insurance website">
+                    </a>
+                </li>
+                <li class="posts__item toggles__button--ui" aria-label="User Interface project designers mobile app">
+                    <a class="posts__link" href="#">
+                        <img class="posts__image" src="images/ui1.jpg"
+                            alt="User Interface project designers mobile app">
+                    </a>
+                </li>
+                <li class="posts__item toggles__button--ui"
+                    aria-label="User Interface project different designers products">
+                    <a class="posts__link" href="#">
+                        <img class="posts__image" src="images/ui2.jpg"
+                            alt="User Interface project different designers products">
+                    </a>
+                </li>
+                <li class="posts__item toggles__button--mockup"
+                    aria-label="Mock-Up project for company's branding stationery">
+                    <a class="posts__link" href="#">
+                        <img class="posts__image" src="images/mockup.jpg"
+                            alt="Mock-Up project for company's branding stationery">
+                    </a>
+                </li>
+            </ul>
         </section>
 
-        <section class="team">
+        <section class="team team--layout" id="aboutUs">
             <h2 class="team__headline">Meet our team</h2>
             <p class="team__text">
-                Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed dooing eiusmod tempor incididut labore
-                UI/UX, print template.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero omnis quidem tempore voluptatum corporis
+                perferendis,
+                quaerat eaque necessitatibus repellat adipisci, iure, eum odio sit nemo.
             </p>
             <!-- Tabs -->
         </section>
 
-        <section class="subscribe">
+        <section class="subscribe subscribe__layout">
             <h2 class="visually-hidden">Subscribe for our weekly digest!</h2>
             <p class="subscribe__headline">
                 Design tips, tricks, and freebies. Delivered weekly.
@@ -146,81 +203,89 @@
             </p>
             <form class="subscribe-form" action="" method="POST">
                 <p class="subscribe-form__item">
-                    <label for=""></label>
-                    <input class="subscribe-form__email" type="email" name="Email" id="">
+                    <label class="visually-hidden" for="subscribeEmail">Subscribe for our newsletters</label>
+                    <input class="subscribe-form__email" type="email" name="Email" id="subscribeEmail"
+                        placeholder="Enter your E-mail...">
                 </p>
                 <button class="subscribe-form__button" type="submit">subscribe</button>
             </form>
         </section>
 
-        <section class="contacts">
+        <section class="contacts" id="contacts">
             <h2 class="contacts__headline">get in touch</h2>
             <p class="contacts__text">
                 Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore
                 et.ur adipis cing elit, sed do eiusmod tempor incididunt ut labore et. ur adipis cing elit, sed do
                 eiusmod tempor incididunt ut labore et.
             </p>
-            <form class="contacts-form" action="" method="POST">
-                <p class="contacts-form__item">
-                    <label class="visually-hidden" for="contacts__name">Enter your name</label>
-                    <input class="contacts-form__name" type="text" name="Name" id="contacts__name">
-                    <label class="visually-hidden" for="contacts__mail">Enter your email</label>
-                    <input class="contacts-form__email" type="email" name="Email" id="contacts__mail">
-                </p>
-                <p class="contacts-form__item">
-                    <label for="user-message">Type your message</label>
-                    <textarea class="contacts-form__user-message" name="User Message" id="user-message" cols="30"
-                        rows="10"></textarea>
-                </p>
-                <button class="contacts-form__button" type="submit">Send message</button>
-            </form>
-            <div class="contacts-info">
-                <h3 class="contacts-info__headline">Contact info</h3>
-                <ul class="contacts-info__list">
-                    <li class="sontacts-info__item">
-                        <p class="contacts-info__address">
-                            Vulitsa Esenina 24/A, Minsk, Belarus
-                        </p>
-                    </li>
-                    <li class="sontacts-info__item">
-                        <a href="mailto:eugene.kotsarev@gmail.com">eugene.kotsarev@gmail.com</a>
-                    </li>
-                    <li class="sontacts-info__item">
-                        <a href="tel:+375256587530">+375 (25) 658-75-30</a>
-                    </li>
-                </ul>
+            <div class="contacts-content-layout">
+                <form class="contacts-form" action="" method="POST">
+                    <p class="contacts-form__item contacts-form__item--top">
+                        <label class="visually-hidden" for="contacts__name">Enter your name</label>
+                        <input class="contacts-form__input contacts-form__name" type="text" name="Name" id="contacts__name"
+                            placeholder="Name">
+                        <label class="visually-hidden" for="contacts__mail">Enter your email</label>
+                        <input class="contacts-form__input contacts-form__email" type="email" name="Email" id="contacts__mail"
+                            placeholder="Your Mail">
+                    </p>
+                    <p class="contacts-form__item">
+                        <label class="visually-hidden" for="user-message">Type your message</label>
+                        <textarea class="contacts-form__user-message" name="User Message" id="user-message" cols="30"
+                            rows="10" placeholder="Type your message..."></textarea>
+                    </p>
+                    <button class="contacts-form__button" type="submit">Send message</button>
+                </form>
+                <div class="contacts-info">
+                    <h3 class="contacts-info__headline">Contact info</h3>
+                    <ul class="contacts-info__list">
+                        <li class="sontacts-info__item">
+                            <p class="contacts-info__link">
+                                vulitsa Esenina 24/A, Minsk, Belarus
+                            </p>
+                        </li>
+                        <li class="contacts-info__item">
+                            <a class="contacts-info__link" href="mailto:eugene.kotsarev@gmail.com">eugene.kotsarev@gmail.com</a>
+                        </li>
+                        <li class="contacts-info__item">
+                            <a class="contacts-info__link" href="tel:+375251234567">+375 (25) 123-45-67</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+
         </section>
 
     </main>
 
-
-    <footer class="footer">
-        <p class="copyright">
-            Made with <i class="fas fa-heart"></i> and few <i class="fas fa-coffee"></i> by Ereburg, 2019.
-        </p>
-        <ul class="social-links">
-            <li class="social-links__item">
-                <a href="#" class="social-links__link">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </li>
-            <li class="social-links__item">
-                <a href="#" class="social-links__link">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </li>
-            <li class="social-links__item">
-                <a href="#" class="social-links__link">
-                    <i class="fab fa-google-plus-g"></i>
-                </a>
-            </li>
-            <li class="social-links__item">
-                <a href="#" class="social-links__link">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-            </li>
-        </ul>
+    <footer class="footer footer--background-dark">
+        <div class="footer--container">
+            <p class="copyright">
+                Made with <i class="fas fa-heart" aria-label="love"></i> and few
+                <i class="fas fa-coffee" aria-label="cups of tea"></i> by Ereburg, 2019.
+            </p>
+            <ul class="social-links">
+                <li class="social-links__item">
+                    <a href="#" class="social-links__link" aria-label="Twitter Link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="social-links__item">
+                    <a href="#" class="social-links__link" aria-label="LinkedIn Link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+                <li class="social-links__item">
+                    <a href="#" class="social-links__link" aria-label="Google Plus Link">
+                        <i class="fab fa-google-plus-g"></i>
+                    </a>
+                </li>
+                <li class="social-links__item">
+                    <a href="#" class="social-links__link" aria-label="Facebook Link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </footer>
 
 
