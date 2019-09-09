@@ -151,6 +151,10 @@ main {
   cursor: pointer;
 }
 
+.header .menu-list__link--active {
+  background-color: #ff3f40;
+}
+
 .header .menu-list__link:hover, .header .menu-list__link:focus {
   background-color: #ff3f40;
 }
@@ -199,6 +203,36 @@ main {
   word-wrap: break-word;
 }
 
+.header .mobile-menu-wrapper {
+  position: relative;
+  display: none;
+  width: 20px;
+  height: 3px;
+  background-color: #fff;
+  border: none;
+  border-radius: 15px;
+}
+
+.header .mobile-menu-wrapper::after, .header .mobile-menu-wrapper::before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 3px;
+  width: 50%;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.header .mobile-menu-wrapper::before {
+  top: -8px;
+  right: 50%;
+}
+
+.header .mobile-menu-wrapper::after {
+  bottom: -8px;
+  left: 50%;
+}
+
 @media screen and (max-width: 1200px) {
   .header .features {
     -webkit-box-orient: vertical;
@@ -226,9 +260,25 @@ main {
 }
 
 @media screen and (max-width: 540px) {
+  .header .navigation--dark {
+    position: fixed;
+    right: 5%;
+    z-index: 15;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+  }
   .header .menu-list {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    display: none;
   }
   .header .features__title {
     font-size: 11vmin;
@@ -237,6 +287,9 @@ main {
   .header .features__video {
     width: 100%;
     height: 100%;
+  }
+  .header .mobile-menu-wrapper {
+    display: block;
   }
   .features__video[poster] {
     -o-object-fit: cover;
@@ -458,7 +511,12 @@ main {
   cursor: pointer;
 }
 
-.portfolio--layout .toggles__button:hover, .portfolio--layout .toggles__button:focus {
+.portfolio--layout .toggles__button:hover {
+  color: #fa6669;
+}
+
+.portfolio--layout .toggles__button:focus {
+  color: #fa6669;
   -webkit-box-shadow: 0px 0px 5px 1px #e02d2d;
           box-shadow: 0px 0px 5px 1px #e02d2d;
 }
@@ -494,8 +552,10 @@ main {
   border-radius: 5px;
   -webkit-box-shadow: 0px 5px 15px #0000003b;
           box-shadow: 0px 5px 15px #0000003b;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
   overflow: hidden;
 }
 
@@ -983,6 +1043,7 @@ main {
 }
 
 .subscribe--layout .subscribe-form__item {
+  position: relative;
   -ms-flex-preferred-size: 520px;
       flex-basis: 520px;
   margin: 0 20px 0 0;
@@ -1006,9 +1067,14 @@ main {
           box-sizing: border-box;
 }
 
+.subscribe--layout .subscribe-form__email:hover, .subscribe--layout .subscribe-form__email:focus {
+  background-color: #f8f5f5;
+  outline: none;
+}
+
 .subscribe--layout .subscribe-form__email:focus {
-  background-color: #ffffff;
-  color: #312f30;
+  -webkit-box-shadow: 0 0 4px 3px #ff3f40;
+          box-shadow: 0 0 4px 3px #ff3f40;
 }
 
 .subscribe--layout .subscribe-form__button {
@@ -1097,6 +1163,14 @@ main {
           flex-grow: 1;
 }
 
+.contacts-form__input:hover {
+  background-color: #dddddd;
+}
+
+.contacts-form__input:focus {
+  background-color: #f8f5f5;
+}
+
 .contacts-form__name {
   margin-right: 40px;
 }
@@ -1107,6 +1181,14 @@ main {
   padding: 30px 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.contacts-form__user-message:hover {
+  background-color: #dddddd;
+}
+
+.contacts-form__user-message:focus {
+  background-color: #f8f5f5;
 }
 
 .contacts-form__button {

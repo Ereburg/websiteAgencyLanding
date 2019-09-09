@@ -132,6 +132,8 @@ main
         text-decoration: none
         text-transform: uppercase
         cursor: pointer
+        &--active
+            background-color: $primary-color
 
         &:hover,
         &:focus
@@ -175,6 +177,31 @@ main
         &:focus
             @extend %button-main--hover
 
+    .mobile-menu-wrapper
+        position: relative
+        display: none
+        width: 20px
+        height: 3px
+        background-color: #fff
+        border: none
+        border-radius: 15px
+
+        &::after,
+        &::before
+            content: ''
+            position: absolute
+            display: block
+            height: 3px
+            width: 50%
+            background-color: #fff
+            border-radius: 15px
+        &::before
+            top: -8px
+            right: 50%
+        &::after
+            bottom: -8px
+            left: 50%
+            
 @media screen and ( max-width: 1200px )
     .header
         .features
@@ -196,8 +223,19 @@ main
 @media screen and ( max-width: 540px )
     .header
 
+        .navigation--dark
+            position: fixed
+            right: 5%
+            z-index: 15
+            display: flex
+            justify-content: center
+            align-items: center
+            height: 60px
+            width: 60px
+            border-radius: 50%
+
         .menu-list
-            flex-wrap: wrap
+            display: none
 
         .features__title
             font-size: 11vmin
@@ -206,6 +244,9 @@ main
         .features__video
             width: 100%
             height: 100%
+
+        .mobile-menu-wrapper
+            display: block
 
     .features__video[poster]
         object-fit: cover
@@ -381,8 +422,10 @@ main
             background-color: transparent
             cursor: pointer
 
-            &:hover,
+            &:hover
+                color: #fa6669
             &:focus
+                color: #fa6669
                 box-shadow: 0px 0px 5px 1px #e02d2d
 
             &--active
@@ -406,7 +449,7 @@ main
             margin: 10px
             border-radius: 5px
             box-shadow: 0px 5px 15px #0000003b
-            transition: .5s ease
+            transition: transform .5s ease
             overflow: hidden
             &:hover > .posts__image,
             &:focus > .posts__image
@@ -671,7 +714,6 @@ main
     .members-socials__link
         font-size: 14px
                 
-
 @keyframes membersName
     0%
         transform: translateY(50px)
@@ -733,13 +775,14 @@ main
         width: 100%
 
         &__item
+            position: relative
             flex-basis: 520px
             margin: 0 20px 0 0
             max-width: 520px
             width: 100%
             height: 100%
             box-sizing: border-box
-
+            
         &__email
             padding: 20px 15px
             margin-bottom: 20px
@@ -750,11 +793,13 @@ main
             border-radius: 5px
             border: none
             box-sizing: border-box
-
+            &:hover,
             &:focus
-                background-color: #ffffff
-                color: $complimentary-color
-
+                background-color: #f8f5f5
+                outline: none
+                
+            &:focus
+                box-shadow: 0 0 4px 3px $primary-color
         &__button
             @extend %formButton
             margin-bottom: 20px
@@ -829,6 +874,10 @@ main
             padding: 25px 50px
             flex-basis: calc((50% / 2) - 5px)
             flex-grow: 1
+            &:hover
+                background-color: #dddddd
+            &:focus
+                background-color: #f8f5f5
 
         &__name
             margin-right: 40px
@@ -839,6 +888,11 @@ main
             width: 100%
             padding: 30px 50px
             box-sizing: border-box
+            &:hover
+                background-color: #dddddd
+            &:focus
+                background-color: #f8f5f5
+
 
         &__button
             @extend %formButton

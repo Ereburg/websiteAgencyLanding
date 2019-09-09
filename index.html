@@ -17,7 +17,7 @@
     <header class="header  header--background-light">
         <div class="header--container">
             <nav class="navigation navigation--dark">
-                <ul class="menu-list ">
+                <ul class="menu-list">
                     <li class="menu-list__item">
                         <a href="#" class="menu-list__link menu-list__link--active">Home</a>
                     </li>
@@ -31,6 +31,8 @@
                         <a href="#contacts" class="menu-list__link">Contact</a>
                     </li>
                 </ul>
+                <button class="mobile-menu-wrapper" type="button">
+                </button>
             </nav>
             <section class="features features--layout">
                 <div class="features__text-layout">
@@ -41,8 +43,6 @@
                     </p>
                     <button class="features__button" type="button">Contact us</button>
                 </div>
-                <!-- <video class="features__video" src="images/particleything.mp4" aria-label="Video about our company"
-                    controls></video> -->
                 <video class="features__video" playsinline="playsinline" controls loop="loop"
                     aria-label="Video about our company" poster="images/video.jpg">
                     <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
@@ -329,11 +329,11 @@
                             <img class="team-member__image" src="images/team2.jpg" alt="">
                             <p class="team-member__name">Mark Webber</p>
                         </li>
-                        <li class="team-member" id="team-member-2"  aria-label="Kit Preston" tabindex="0">
+                        <li class="team-member" id="team-member-2" aria-label="Kit Preston" tabindex="0">
                             <img class="team-member__image" src="images/team3-1.jpg" alt="">
                             <p class="team-member__name">Kit Preston</p>
                         </li>
-                        <li class="team-member" id="team-member-3"  aria-label="Joe Russo" tabindex="0">
+                        <li class="team-member" id="team-member-3" aria-label="Joe Russo" tabindex="0">
                             <img class="team-member__image" src="images/team4-1.jpg" alt="">
                             <p class="team-member__name">Joe Russo</p>
                         </li>
@@ -358,9 +358,10 @@
                 <p class="subscribe-form__item">
                     <label class="visually-hidden" for="subscribeEmail">Subscribe for our newsletters</label>
                     <input class="subscribe-form__email" type="email" name="Email" id="subscribeEmail"
-                        placeholder="Enter your E-mail...">
+                        placeholder="Enter your E-mail..." required>
                 </p>
-                <button class="subscribe-form__button" type="submit" aria-label="Subscribe to our newsletters">subscribe</button>
+                <button class="subscribe-form__button" type="submit"
+                    aria-label="Subscribe to our newsletters">subscribe</button>
             </form>
         </section>
 
@@ -376,10 +377,10 @@
                     <p class="contacts-form__item contacts-form__item--top">
                         <label class="visually-hidden" for="contacts__name">Enter your name</label>
                         <input class="contacts-form__input contacts-form__name" type="text" name="Name"
-                            id="contacts__name" placeholder="Name">
+                            id="contacts__name" placeholder="Name" required>
                         <label class="visually-hidden" for="contacts__mail">Enter your email</label>
                         <input class="contacts-form__input contacts-form__email" type="email" name="Email"
-                            id="contacts__mail" placeholder="Your Mail">
+                            id="contacts__mail" placeholder="Your Mail" required>
                     </p>
                     <p class="contacts-form__item">
                         <label class="visually-hidden" for="user-message">Type your message</label>
@@ -413,8 +414,8 @@
     <footer class="footer footer--background-dark">
         <div class="footer--container">
             <p class="copyright">
-                Made with <i class="fas fa-heart" aria-label="love" value="love"></i> and few
-                <i class="fas fa-coffee" aria-label="cups of tea" value="cups of tea"></i> by Ereburg, 2019.
+                Made with <i class="fas fa-heart" aria-label="love"></i> and few
+                <i class="fas fa-coffee" aria-label="cups of tea"></i> by Ereburg, 2019.
             </p>
             <ul class="social-links">
                 <li class="social-links__item">
