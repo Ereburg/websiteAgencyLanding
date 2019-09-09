@@ -1,16 +1,68 @@
-$(function() {
-    $('.toggles button').click(function() {
-        var get_id = this.id;
-        var get_current = $('.posts .' + get_id);
+var slides = document.querySelectorAll('#slides .slide');
+var currentSlide = 0;
+// var slideInterval = setInterval(nextSlide, 2000);
 
-        $('.posts__item').not(get_current).hide(500);
-        get_current.show(500);
-    });
+function nextSlide() {
+    goToSlide(currentSlide + 1);
+}
 
-    $('#toggles__button--all').click(function() {
-        $('.posts__item').show(500);
-    });
-});
+function previousSlide() {
+    goToSlide(currentSlide - 1);
+}
+
+function goToSlide(n) {
+    slides[currentSlide].className = 'slide';
+    currentSlide = (n + slides.length) % slides.length;
+    slides[currentSlide].className = 'slide showing';
+}
+
+// var playing = true;
+// var pauseButton = document.getElementById('pause');
+
+// function pauseSlideshow() {
+//     pauseButton.innerHTML = 'Play';
+//     playing = false;
+//     clearInterval(slideInterval);
+// }
+
+// function playSlideshow() {
+//     pauseButton.innerHTML = 'Pause';
+//     playing = true;
+//     slideInterval = setInterval(nextSlide, 2000);
+// }
+
+// pauseButton.onclick = function () {
+//     if (playing) {
+//         pauseSlideshow();
+//     } else {
+//         playSlideshow();
+//     }
+// };
+
+var next = document.getElementById('next');
+var previous = document.getElementById('previous');
+
+next.onclick = function () {
+    // pauseSlideshow();
+    nextSlide();
+};
+previous.onclick = function () {
+    // pauseSlideshow();
+    previousSlide();
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Отмена действий по умолчанию
@@ -34,7 +86,7 @@ try {
     isStorageSupport = false;
 }
 
-link.addEventListener('click', function(evt) {
+link.addEventListener('click', function (evt) {
     evt.preventDefault();
     popup.classList.add('modal-show');
     login.focus();
@@ -46,13 +98,13 @@ link.addEventListener('click', function(evt) {
     }
 });
 
-close.addEventListener('click', function(evt) {
+close.addEventListener('click', function (evt) {
     evt.preventDefault();
     popup.classList.remove('modal-show');
     popup.classList.remove('modal-error');
 });
 
-form.addEventListener('submit', function(evt){
+form.addEventListener('submit', function (evt) {
     // evt.preventDefault();
     // console.log(login.value);
     // console.log(password.value);
@@ -60,14 +112,14 @@ form.addEventListener('submit', function(evt){
         evt.preventDefault();
         console.log('Введите хоть что-то');
         popup.classList.add('modal-error');
-    } else { 
+    } else {
         if (isStorageSupport) {
             localStorage.setItem('login', login.value);
         }
     }
 });
 
-window.addEventListener('keydown', function(evt) {
+window.addEventListener('keydown', function (evt) {
     if (evt.keyCode === 27) {
         evt.preventDefault();
     }
