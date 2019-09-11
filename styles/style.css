@@ -433,8 +433,6 @@ main {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -ms-flex-preferred-size: 550px;
-      flex-basis: 550px;
   max-width: 550px;
   width: 100%;
 }
@@ -520,8 +518,6 @@ main {
     margin-left: auto;
   }
   .services__text-layout {
-    -ms-flex-preferred-size: 320px;
-        flex-basis: 320px;
     margin-bottom: 100px;
     max-width: 900px;
     text-align: center;
