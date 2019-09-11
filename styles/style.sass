@@ -72,6 +72,8 @@ $regular-text: #737373
 
 // Стили документа
 
+html
+    scroll-behavior: smooth
 body
     -webkit-font-smoothing: antialiased
     font-family: 'Open Sans', sans-serif
@@ -112,7 +114,28 @@ main
 // Конец общих стилей
 
 .header
-    padding: 29px 0 0 0
+    padding: 30px 0 0 0
+
+    .navigation--fixed
+        position: fixed
+        top: 0px
+        // left: 0
+        width: calc( 100vw - 30px )
+        max-width: 1280px
+        // width: 100%
+        margin: 0 auto
+        z-index: 20
+        border-radius: 5px
+        background-color: rgb(252, 249, 249)
+        color: $regular-text
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.24)
+
+        .menu-list__link
+            padding: 30px 24px 
+            &:hover,
+            &:focus
+                background-color: $primary-color
+                color: rgb(252, 249, 249)
 
     .menu-list
         display: flex
@@ -146,6 +169,9 @@ main
         align-items: flex-start
         flex-wrap: wrap
         padding: 110px 0 110px
+
+    .features--fix
+        margin-top: 120px
 
     .features__title
         margin: 0
@@ -226,7 +252,8 @@ main
 
         .navigation--dark
             position: fixed
-            right: 5%
+            top: 15px
+            right: 15px
             z-index: 15
             display: flex
             justify-content: center
@@ -234,10 +261,17 @@ main
             height: 60px
             width: 60px
             border-radius: 50%
-
-        .navigation
             background-color: $primary-color
             box-shadow: 0 0px 7px 1px rgba(0, 0, 0, 0.39)
+            color: #fff
+
+            .menu-list__link
+                padding: 40px 24px 34px
+                
+                &:hover,
+                &:focus
+                    background-color: $complimentary-color
+
         .menu-list
             display: none
             
@@ -259,17 +293,6 @@ main
             display: flex
             align-items: center
             justify-content: center
-
-        .menu-list__link
-            padding: 40px 24px 34px
-            font-size: 14px
-            font-weight: 700
-            text-decoration: none
-            text-transform: uppercase
-            cursor: pointer
-            &:hover,
-            &:focus
-                background-color: $complimentary-color
 
         .features__title
             font-size: 11vmin
@@ -296,9 +319,6 @@ main
                 left: 7px
                 top: 6px
                 transition: .5s ease
-
-
-
 
     .features__video[poster]
         object-fit: cover
@@ -432,14 +452,13 @@ main
 // Portfolio
 
 .portfolio--layout
+    @extend %container
     display: flex
     flex-direction: column
     align-items: center
     justify-content: center
     padding-top: 110px
-    padding-bottom: 110px
-    @extend %container
-
+    
     .portfolio__headline
         @extend %heading
         text-align: center
@@ -537,6 +556,7 @@ main
 .team--layout
     display: flex
     flex-direction: column
+    padding-top: 110px
     padding-bottom: 110px
     @extend %container
 
@@ -592,6 +612,7 @@ main
     margin: 0
     width: 100%
     max-width: 880px
+    min-height: 200px
     list-style-type: none
     box-sizing: border-box
 

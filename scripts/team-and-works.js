@@ -1,3 +1,5 @@
+// Код, отвечающий за секцию Portfolio
+
 $(function () {
     $('.toggles button').click(function () {
         var get_id = this.id;
@@ -11,6 +13,18 @@ $(function () {
         $('.posts__item').show(0);
     });
 });
+
+$(function () {
+    $('.toggles__button').click(function () {
+        var get_id = this.id;
+
+        $('.toggles__button').not($('.toggles__button .' + get_id)).removeClass('toggles__button--active');
+        $('.toggles__button').$('.toggles__button .' + get_id).addClass('toggles__button--active');
+    });
+});
+
+
+// Код, отвечающий за секцию Team
 
 $(function () {
     $('.team-members-toggles li').click(function () {
@@ -27,3 +41,71 @@ $(function () {
         text_current.addClass('team-members--active');
     });
 });
+
+
+$("#team-member-1").keyup(function (event) {
+    if (event.keyCode === 13) {
+        $("#team-member-1").click();
+    }
+});
+
+$("#team-member-2").keyup(function (event) {
+    if (event.keyCode === 13) {
+        $("#team-member-2").click();
+    }
+});
+$("#team-member-3").keyup(function (event) {
+    if (event.keyCode === 13) {
+        $("#team-member-3").click();
+    }
+});
+$("#team-member-4").keyup(function (event) {
+    if (event.keyCode === 13) {
+        $("#team-member-4").click();
+    }
+});
+
+
+// Menu behavior on Scroll
+
+var $menu = $("#navMenu");
+var $features = $('.header .features--layout');
+
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 50 && $menu.hasClass("navigation")) {
+        $menu.removeClass("navigation").addClass("navigation--fixed");
+        $features.addClass('features--fix');
+    } else if ($(this).scrollTop() <= 50 && $menu.hasClass("navigation--fixed")) {
+        $menu.removeClass("navigation--fixed").addClass("navigation");
+        $features.removeClass('features--fix');
+    }
+});
+
+
+
+// Smooth Scroll
+
+$(document).ready(function(){
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+  
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+  
+        // Store hash
+        var hash = this.hash;
+  
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 400, function(){
+     
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+  });

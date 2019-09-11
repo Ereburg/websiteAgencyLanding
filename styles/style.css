@@ -75,6 +75,10 @@
   border-radius: 15px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   font-family: 'Open Sans', sans-serif;
@@ -116,7 +120,30 @@ main {
 }
 
 .header {
-  padding: 29px 0 0 0;
+  padding: 30px 0 0 0;
+}
+
+.header .navigation--fixed {
+  position: fixed;
+  top: 0px;
+  width: calc( 100vw - 30px);
+  max-width: 1280px;
+  margin: 0 auto;
+  z-index: 20;
+  border-radius: 5px;
+  background-color: #fcf9f9;
+  color: #737373;
+  -webkit-box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.24);
+          box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.24);
+}
+
+.header .navigation--fixed .menu-list__link {
+  padding: 30px 24px;
+}
+
+.header .navigation--fixed .menu-list__link:hover, .header .navigation--fixed .menu-list__link:focus {
+  background-color: #ff3f40;
+  color: #fcf9f9;
 }
 
 .header .menu-list {
@@ -173,6 +200,10 @@ main {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 110px 0 110px;
+}
+
+.header .features--fix {
+  margin-top: 120px;
 }
 
 .header .features__title {
@@ -263,7 +294,8 @@ main {
 @media screen and (max-width: 540px) {
   .header .navigation--dark {
     position: fixed;
-    right: 5%;
+    top: 15px;
+    right: 15px;
     z-index: 15;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -277,11 +309,16 @@ main {
     height: 60px;
     width: 60px;
     border-radius: 50%;
-  }
-  .header .navigation {
     background-color: #ff3f40;
     -webkit-box-shadow: 0 0px 7px 1px rgba(0, 0, 0, 0.39);
             box-shadow: 0 0px 7px 1px rgba(0, 0, 0, 0.39);
+    color: #fff;
+  }
+  .header .navigation--dark .menu-list__link {
+    padding: 40px 24px 34px;
+  }
+  .header .navigation--dark .menu-list__link:hover, .header .navigation--dark .menu-list__link:focus {
+    background-color: #312f30;
   }
   .header .menu-list {
     display: none;
@@ -320,17 +357,6 @@ main {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-  .header .menu-list__link {
-    padding: 40px 24px 34px;
-    font-size: 14px;
-    font-weight: 700;
-    text-decoration: none;
-    text-transform: uppercase;
-    cursor: pointer;
-  }
-  .header .menu-list__link:hover, .header .menu-list__link:focus {
-    background-color: #312f30;
   }
   .header .features__title {
     font-size: 11vmin;
@@ -544,7 +570,6 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   padding-top: 110px;
-  padding-bottom: 110px;
 }
 
 .portfolio--layout .portfolio__headline {
@@ -686,6 +711,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-top: 110px;
   padding-bottom: 110px;
 }
 
@@ -763,6 +789,7 @@ main {
   margin: 0;
   width: 100%;
   max-width: 880px;
+  min-height: 200px;
   list-style-type: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
