@@ -73,6 +73,7 @@ $regular-text: #737373
 // Стили документа
 
 body
+    -webkit-font-smoothing: antialiased
     font-family: 'Open Sans', sans-serif
 
 .header--container,
@@ -177,10 +178,10 @@ main
         &:focus
             @extend %button-main--hover
 
-    .mobile-menu-wrapper
+    .mobile-menu-button
         position: relative
         display: none
-        width: 20px
+        width: 25px
         height: 3px
         background-color: #fff
         border: none
@@ -234,8 +235,41 @@ main
             width: 60px
             border-radius: 50%
 
+        .navigation
+            background-color: $primary-color
+            box-shadow: 0 0px 7px 1px rgba(0, 0, 0, 0.39)
         .menu-list
             display: none
+            
+        .menu-list.menu-list--show
+            position: fixed
+            z-index: 15
+            top: 0
+            left: 0
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            width: 100vw
+            height: 100vh
+            background-color: $primary-color
+            transition: .5s ease
+
+        .menu-list__item
+            display: flex
+            align-items: center
+            justify-content: center
+
+        .menu-list__link
+            padding: 40px 24px 34px
+            font-size: 14px
+            font-weight: 700
+            text-decoration: none
+            text-transform: uppercase
+            cursor: pointer
+            &:hover,
+            &:focus
+                background-color: $complimentary-color
 
         .features__title
             font-size: 11vmin
@@ -245,8 +279,26 @@ main
             width: 100%
             height: 100%
 
-        .mobile-menu-wrapper
+        .mobile-menu-button
+            z-index: 15
             display: block
+            transition: .5s ease
+        .mobile-menu-button--close
+            transform: rotate(45deg)
+            transition: .5s ease
+            &::before
+                transform: rotate(90deg) translateY(0)
+                right: 6px
+                top: -7px
+                transition: .5s ease
+            &::after
+                transform: rotate(90deg) translateY(0)
+                left: 7px
+                top: 6px
+                transition: .5s ease
+
+
+
 
     .features__video[poster]
         object-fit: cover

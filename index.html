@@ -19,7 +19,7 @@
             <nav class="navigation navigation--dark">
                 <ul class="menu-list">
                     <li class="menu-list__item">
-                        <a href="#" class="menu-list__link menu-list__link--active">Home</a>
+                        <a href="#" class="menu-list__link">Home</a>
                     </li>
                     <li class="menu-list__item">
                         <a href="#portfolio" class="menu-list__link">Portfolio</a>
@@ -31,7 +31,7 @@
                         <a href="#contacts" class="menu-list__link">Contact</a>
                     </li>
                 </ul>
-                <button class="mobile-menu-wrapper" type="button">
+                <button class="mobile-menu-button" type="button" aria-label="Click to show menu">
                 </button>
             </nav>
             <section class="features features--layout">
@@ -50,11 +50,9 @@
                 </video>
             </section>
         </div>
-
     </header>
 
     <main class="main">
-
         <section class="services services--layout">
             <h2 class="visually-hidden">Our Services</h2>
             <div class="services__text-layout">
@@ -192,14 +190,14 @@
             </p>
             <div class="team-members-layout">
                 <div class="team-images">
-                    <img class="team-images__member team-members--active" src="images/team2.jpg" alt="">
-                    <img class="team-images__member" src="images/team3-1.jpg" alt="">
-                    <img class="team-images__member" src="images/team4-1.jpg" alt="">
-                    <img class="team-images__member" src="images/team1.jpg" alt="">
+                    <img class="team-images__member team-member-1 team-members--active" src="images/team2.jpg" alt="">
+                    <img class="team-images__member team-member-2" src="images/team3-1.jpg" alt="">
+                    <img class="team-images__member team-member-3" src="images/team4-1.jpg" alt="">
+                    <img class="team-images__member team-member-4" src="images/team1.jpg" alt="">
                 </div>
                 <div class="team-members-main">
                     <ul class="members">
-                        <li class="members__item team-members--active">
+                        <li class="members__item team-member-1 team-members--active" >
                             <h3 class="members__headline">Mark Webber</h3>
                             <p class="members__description">
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem similique voluptatum illum
@@ -230,7 +228,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="members__item toggles-team__member-2" aria-label="Print project in various items">
+                        <li class="members__item team-member-2 " aria-label="Print project in various items">
                             <h3 class="members__headline">Kit Preston</h3>
                             <p class="members__description">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cumque assumenda in quam
@@ -260,7 +258,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="members__item toggles-team__member-3" aria-label="Print project on notebook">
+                        <li class="members__item team-member-3" aria-label="Print project on notebook">
                             <h3 class="members__headline">Joe Russo</h3>
                             <p class="members__description">
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime amet culpa nulla vitae
@@ -291,8 +289,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="members__item toggles-team__member-4"
-                            aria-label="Web design project charity website">
+                        <li class="members__item team-member-4" aria-label="Web design project charity website">
                             <h3 class="members__headline">Elizabeth Taylor</h3>
                             <p class="members__description">
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis provident mollitia
@@ -408,7 +405,6 @@
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer class="footer footer--background-dark">
@@ -442,23 +438,9 @@
         </div>
     </footer>
 
-    <script src="scripts/category.js"></script>
+    <script src="scripts/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-        $(function () {
-            $('.toggles button').click(function () {
-                var get_id = this.id;
-                var get_current = $('.posts .' + get_id);
-
-                $('.posts__item').not(get_current).hide(500);
-                get_current.show(500);
-            });
-
-            $('#toggles__button--all').click(function () {
-                $('.posts__item').show(500);
-            });
-        });
-    </script>
+    <script src="scripts/team-and-works.js"></script>
 </body>
 
 </html>
