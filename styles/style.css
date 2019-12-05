@@ -96,6 +96,10 @@ main {
   background: #fff;
 }
 
+button {
+  cursor: pointer;
+}
+
 .header--static,
 .footer--background-dark {
   background-color: #312f30;
