@@ -9,37 +9,41 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9021eac6a4.js"></script>
-    <link rel="stylesheet" href="styles/style.min.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
 
-    <header class="header  header--background-light">
-        <div class="header--container">
-            <nav class="navigation navigation--dark" id="navMenu">
-                <ul class="menu-list">
-                    <li class="menu-list__item">
-                        <a href="#" class="menu-list__link">Home</a>
-                    </li>
-                    <li class="menu-list__item">
-                        <a href="#portfolio" class="menu-list__link">Portfolio</a>
-                    </li>
-                    <li class="menu-list__item">
-                        <a href="#aboutUs" class="menu-list__link">About us</a>
-                    </li>
-                    <li class="menu-list__item">
-                        <a href="#contacts" class="menu-list__link">Contact</a>
-                    </li>
-                </ul>
-                <button class="mobile-menu-button" type="button" aria-label="Click to show menu">
-                </button>
-            </nav>
+    <header class="header header--static">
+        <nav class="navigation navigation--dark" id="navMenu">
+            <ul class="menu-list">
+                <li class="menu-list__item">
+                    <a href="#" class="menu-list__link">Home</a>
+                </li>
+                <li class="menu-list__item">
+                    <a href="#portfolio" class="menu-list__link">Portfolio</a>
+                </li>
+                <li class="menu-list__item">
+                    <a href="#aboutUs" class="menu-list__link">About us</a>
+                </li>
+                <li class="menu-list__item">
+                    <a href="#contacts" class="menu-list__link">Contact</a>
+                </li>
+            </ul>
+            <button class="mobile-menu-button" type="button" aria-label="Click to show menu">
+            </button>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="bg--light">
             <section class="features features--layout">
+                <h2 class="visually-hidden">Main info about company</h2>
                 <div class="features__text-layout">
-                    <h1 class="features__title">Our strong organization</h1>
+                    <h1 class="features__title">Our strong organaisation</h1>
                     <p class="features__description">
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus quod corrupti cum nam eos
-                        laborum nostrum quae, repellendus saepe voluptatibus? Ad praesentium maiores, quasi vitae quia
+                        laborum nostrum quae, repellendus saepe voluptatibus? Ad praesentium maiores.
                     </p>
                     <button class="features__button" type="button" style="cursor: pointer;">Contact us</button>
                 </div>
@@ -50,9 +54,7 @@
                 </video>
             </section>
         </div>
-    </header>
 
-    <main class="main">
         <section class="services services--layout">
             <h2 class="visually-hidden">Our Services</h2>
             <div class="services__text-layout">
@@ -70,33 +72,31 @@
                     <h3 class="services-list__headline">Management</h3>
                     <p class="services-list__text">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nemo numquam alias eveniet,
-                        voluptas ducimus quos aut. Repellendus, consectetur earum. Lorem ipsum dolor sit.
+                        voluptas ducimus quos aut. Repellendus, consectetur earum.
                     </p>
                 </li>
                 <li class="services-list__item">
                     <i class="fas fa-pencil-alt"></i>
                     <h3 class="services-list__headline">UI /UX Design</h3>
                     <p class="services-list__text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum animi veritatis aliquid velit.
-                        Eum odio alias voluptas aspernatur maiores. Voluptatibus minima molestias natus consectetur
-                        debitis.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nemo numquam alias eveniet,
+                        voluptas ducimus quos aut. Repellendus, consectetur earum.
                     </p>
                 </li>
                 <li class="services-list__item">
                     <i class="far fa-gem"></i>
                     <h3 class="services-list__headline">Logo / Branding</h3>
                     <p class="services-list__text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, minima aliquid velit
-                        officia sequi nesciunt sint esse. Repellendus, consectetur earum. Repellendus, consectetur
-                        earum.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nemo numquam alias eveniet,
+                        voluptas ducimus quos aut. Repellendus, consectetur earum.
                     </p>
                 </li>
                 <li class="services-list__item">
                     <i class="fas fa-shuttle-van"></i>
                     <h3 class="services-list__headline">Animation</h3>
                     <p class="services-list__text">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati saepe, ducimus facere
-                        similique consequuntur suscipit, veniam iure voluptatibus ipsa nemo labore nam, quod omnis!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nemo numquam alias eveniet,
+                        voluptas ducimus quos aut. Repellendus, consectetur earum.
                     </p>
                 </li>
             </ul>
@@ -188,14 +188,16 @@
             </p>
             <div class="team-members-layout">
                 <div class="team-images">
-                    <img class="team-images__member team-member-1 team-members--active" src="images/team2.jpg" alt="Kit Preston">
+                    <img class="team-images__member team-member-1 team-members--active" src="images/team2.jpg"
+                        alt="Kit Preston">
                     <img class="team-images__member team-member-2" src="images/team3-1.jpg" alt="Joe Russo">
                     <img class="team-images__member team-member-3" src="images/team4-1.jpg" alt="Elizabeth Taylor">
                     <img class="team-images__member team-member-4" src="images/team1.jpg" alt="Mark Webber">
                 </div>
                 <div class="team-members-main">
                     <ul class="members">
-                        <li class="members__item team-member-1 team-members--active" aria-label="About Mark Webber and his social links">
+                        <li class="members__item team-member-1 team-members--active"
+                            aria-label="About Mark Webber and his social links">
                             <h3 class="members__headline">Mark Webber</h3>
                             <p class="members__description">
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem similique voluptatum illum
@@ -287,7 +289,8 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="members__item team-member-4" aria-label="About Elizabeth Taylor and her social links">
+                        <li class="members__item team-member-4"
+                            aria-label="About Elizabeth Taylor and her social links">
                             <h3 class="members__headline">Elizabeth Taylor</h3>
                             <p class="members__description">
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis provident mollitia
@@ -388,16 +391,15 @@
                     <h3 class="contacts-info__headline">Contact info</h3>
                     <ul class="contacts-info__list">
                         <li class="sontacts-info__item">
-                            <p class="contacts-info__link">
-                                Esenina St. 24/A, Minsk, Belarus
+                            <p class="contacts-info__text">
+                                Unnamed St. 11/A, Minsk, Belarus
                             </p>
                         </li>
                         <li class="contacts-info__item">
-                            <a class="contacts-info__link"
-                                href="mailto:eugene.kotsarev@gmail.com">eugene.kotsarev@gmail.com</a>
+                            <a class="contacts-info__link" href="mailto:example@gmail.com">example@gmail.com</a>
                         </li>
                         <li class="contacts-info__item">
-                            <a class="contacts-info__link" href="tel:+375251234567">+375 (25) 123-45-67</a>
+                            <a class="contacts-info__link" href="tel:+8841776765554">+(88) 417 767 65554</a>
                         </li>
                     </ul>
                 </div>
