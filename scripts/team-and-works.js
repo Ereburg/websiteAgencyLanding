@@ -68,16 +68,14 @@ $("#team-member-4").keyup(function (event) {
 
 // Menu behavior on Scroll
 
-var $menu = $("#navMenu");
-var $features = $('.header .features--layout');
+var $menu = $(".header");
+// var $features = $('.header .features--layout');
 
 $(window).scroll(function () {
-    if ($(this).scrollTop() > 50 && $menu.hasClass("navigation")) {
-        $menu.removeClass("navigation").addClass("navigation--fixed");
-        $features.addClass('features--fix');
-    } else if ($(this).scrollTop() <= 50 && $menu.hasClass("navigation--fixed")) {
-        $menu.removeClass("navigation--fixed").addClass("navigation");
-        $features.removeClass('features--fix');
+    if ($(this).scrollTop() > 30 && $menu.hasClass("header--static")) {
+        $menu.removeClass("header--static").addClass("header--scroll");
+    } else if ($(this).scrollTop() <= 30 && $menu.hasClass("header--scroll")) {
+        $menu.removeClass("header--scroll").addClass("header--static");
     }
 });
 

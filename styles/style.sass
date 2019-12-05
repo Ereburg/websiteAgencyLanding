@@ -1,0 +1,1141 @@
+$primary-color: #ff3f40
+$complimentary-color: #312f30
+$bg-light: #f6f2ef
+$text-white: #e0e0e0
+$regular-text: #737373
+
+%heading
+    margin: 0
+    font-size: 42px
+    font-weight: 700
+    text-transform: uppercase
+    color: $complimentary-color
+
+%button-main
+    margin-top: 50px
+    padding: 20px 10px
+    max-width: 226px
+    width: 100%
+    background-color: $primary-color
+    border: 2px solid $primary-color
+    border-radius: 5px
+    font-size: 18px
+    font-weight: 600
+    text-transform: capitalize
+    color: #fff
+    transition: all .3s ease
+
+%button-main--hover
+    outline: none
+    box-shadow: 0 5px 25px rgba(255, 0, 0, 0.603)
+
+%section--text
+    position: relative
+    margin: 30px 0 0
+    padding-bottom: 50px
+    font-size: 16px
+    line-height: 28px
+    color: $regular-text
+
+%section-line
+    content: ''
+    position: absolute
+    bottom: 0px
+    width: 100%
+    max-width: 130px
+    height: 2px
+    background-color: $primary-color
+
+%container
+    max-width: 1280px
+    margin: 0 auto
+    padding: 0 15px
+
+%formButton
+    padding: 21px 62px
+    background-color: $primary-color
+    border: none
+    border-radius: 5px
+    font-size: 18px
+    font-weight: 700
+    text-transform: uppercase
+    color: #fff
+    transition: .5s ease
+
+%formButton--hover
+    box-shadow: 0 0px 25px rgba(255, 0, 0, 0.767)
+
+%form-background
+    background-color: #e5e5e5
+    border: none
+    border-radius: 15px
+
+// Стили документа
+
+html
+    scroll-behavior: smooth
+body
+    -webkit-font-smoothing: antialiased
+    font-family: 'Open Sans', sans-serif
+
+.header--container,
+.footer--container
+    @extend %container
+
+body,
+.bg--light
+    background-color: $bg-light
+ 
+main 
+    background: #fff
+
+.header--static,
+.footer--background-dark
+    background-color: $complimentary-color
+    color: $text-white
+
+// общие стили для всех элементов
+a
+    color: inherit
+    cursor: pointer
+
+.features__video[poster]
+    width: 100%
+
+main
+    overflow: hidden
+
+.visually-hidden
+    visually: hidden
+    position: absolute
+    width: 1px
+    height: 1px
+    margin: -1px
+    border: 0
+    padding: 0
+    clip: rect (0 0 0 0)
+    overflow: hidden
+// Конец общих стилей
+
+.header
+    position: sticky
+    top: 0
+    z-index: 100
+    max-width: 1280px
+    margin: 30px auto 0
+    padding: 0
+    transition: all .3s ease
+
+    &--scroll
+        max-width: 100%
+        border-radius: 5px
+        background-color: #fff
+        color: $regular-text
+        box-shadow: 0 4px 12px 0 #0000001c
+
+        .menu-list__link:hover,
+        .menu-list__link:focus
+            background-color: $primary-color
+            color: rgb(252, 249, 249)
+
+    .menu-list
+        display: flex
+        justify-content: center
+        margin: 0 auto
+        padding: 0
+        list-style-type: none
+
+    .menu-list__item
+        display: flex
+        align-items: center
+        justify-content: center
+
+    .menu-list__link
+        padding: 40px 24px 34px
+        font-size: 14px
+        font-weight: 700
+        text-decoration: none
+        text-transform: uppercase
+        cursor: pointer
+        &--active
+            background-color: $primary-color
+
+        &:hover,
+        &:focus
+            background-color: $primary-color
+
+    .mobile-menu-button
+        position: relative
+        display: none
+        width: 25px
+        height: 3px
+        background-color: #fff
+        border: none
+        border-radius: 15px
+        transition: all .3s ease
+
+        &::after,
+        &::before
+            content: ''
+            position: absolute
+            display: block
+            height: 3px
+            width: 50%
+            background-color: #fff
+            border-radius: 15px
+            transition: all .3s ease
+        &::before
+            top: -8px
+            right: 50%
+        &::after
+            bottom: -8px
+            left: 50%
+
+.features--layout
+    @extend %container
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    flex-wrap: wrap
+    padding: 110px 15px 110px
+
+.features__title
+    margin: 0
+    font-size: 60px
+    font-weight: 900
+    letter-spacing: 2px
+    text-transform: uppercase
+
+.features__text-layout
+    max-width: 615px
+
+.features__video
+    max-width: 540px
+    width: 100%
+    height: 360px
+    border-radius: .2%
+    box-shadow: 0px 14px 73px 0px rgba(0, 0, 0, 0.295)
+
+.features__description
+    max-width: 505px
+    font-size: 16px
+    line-height: 28px
+    color: #6f6d6d
+    word-wrap: break-word
+
+.features__button
+    @extend %button-main
+    transition: all .3s ease
+    &:hover,
+    &:focus
+        @extend %button-main--hover
+
+.features__video[poster]
+    object-fit: cover
+            
+@media screen and ( max-width: 1200px )
+    
+    .features
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+    .features__text-layout
+        max-width: 550px
+        text-align: center
+
+    .features__description
+        margin: 24px 0 0
+        max-width: 100%
+
+    .features__video
+        margin-top: 68px
+
+@media screen and ( max-width: 540px )
+    .header
+        .navigation--dark
+            position: fixed
+            top: 15px
+            right: 15px
+            z-index: 15
+            display: flex
+            justify-content: center
+            align-items: center
+            height: 60px
+            width: 60px
+            border-radius: 50%
+            background-color: $primary-color
+            box-shadow: 0 0px 7px 1px rgba(0, 0, 0, 0.39)
+            color: #fff
+
+            .menu-list__link
+                padding: 40px 24px 34px
+                
+                &:hover,
+                &:focus
+                    background-color: $complimentary-color
+
+        .menu-list
+            display: none
+            
+        .menu-list.menu-list--show
+            position: fixed
+            z-index: 15
+            top: 0
+            left: 0
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            width: 100vw
+            height: 100vh
+            background-color: $primary-color
+            transition: .5s ease
+
+        .menu-list__item
+            display: flex
+            align-items: center
+            justify-content: center
+
+        .mobile-menu-button
+            z-index: 15
+            display: block
+            transition: .5s ease
+            outline: none
+        .mobile-menu-button--close
+            background: transparent
+            transition: all .3s ease
+            &::before
+                right: 0
+                width: 100%
+                transform: rotate(-405deg) translate(-5px, 4px)
+            &::after
+                width: 100%
+                transform: rotate(405deg) translate(-10px)
+                left: 7px
+                top: 6px
+                
+
+    .features__title
+        font-size: 11vmin
+        letter-spacing: 0px
+
+    .features__video
+        width: 100%
+        height: 100%
+
+// Main section
+
+// Services
+.services--layout
+    position: relative
+    display: flex
+    justify-content: space-between
+    padding-top: 110px
+    padding-bottom: 110px
+    color: $regular-text
+    @extend %container
+
+    &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        width: 100%
+        height: 2px
+        background-color: #ececec
+
+.services__text-layout
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    max-width: 550px
+    width: 100%
+
+    .services__headline
+        @extend %heading
+
+    .services__description
+        margin: 40px 0 0
+        font-size: 16px
+        line-height: 28px
+
+    .services__button
+        @extend %button-main
+        margin: 50px 0 0 0
+        &:hover,
+        &:focus
+            @extend %button-main--hover
+
+.services-list
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+    flex-basis: calc( 100% - 550px )
+    margin: 0 0 0 100px
+    padding: 0
+    list-style-type: none
+
+    &__item
+        width: calc( 50% - 20px )
+        margin-bottom: 50px
+
+        &:not(:nth-child(1)):not(:nth-child(2))
+            margin-bottom: 0
+
+    &__item:nth-child(2n+1)
+        margin-right: 40px
+
+    .fas,
+    .far
+        font-size: 40px
+        color: $primary-color
+
+    &__headline
+        font-size: 24px
+        font-weight: 600
+
+    &__text
+        font-size: 16px
+        line-height: 28px
+        font-weight: 400
+
+@media screen and ( max-width: 1200px )
+    .services--layout
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+        .services__headline
+            max-width: 570px
+            width: 100%
+            margin-right: auto
+            margin-left: auto
+
+        .services__description
+            max-width: 540px
+            width: 100%
+            margin-right: auto
+            margin-left: auto
+
+    .services__text-layout
+        margin-bottom: 100px
+        max-width: 900px
+        text-align: center
+
+        .services__button
+            margin: 55px auto 0
+
+    .services-list
+        margin-left: 0
+        max-width: 900px
+
+@media screen and ( max-width: 570px )
+    .services__text-layout
+        text-align: center
+
+        .services__headline
+            font-size: 10vmin
+
+    .services-list
+        flex-wrap: wrap
+
+        &__item
+            width: 100%
+            text-align: center
+
+        &__item:nth-child(2n+1)
+            margin-right: 0px
+
+// End of Servises
+
+// Portfolio
+
+.portfolio--layout
+    @extend %container
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding-top: 110px
+    
+    .portfolio__headline
+        @extend %heading
+        text-align: center
+
+    .portfolio__text
+        @extend %section--text
+        max-width: 520px
+        width: 100%
+        text-align: center
+
+        &::after
+            @extend %section-line
+            left: 50%
+            transform: translateX(-50%)
+
+    .toggles
+        display: flex
+        justify-content: center
+        margin: 70px 0 50px
+        padding: 0
+        list-style-type: none
+
+        &__button
+            padding: 5px 10px
+            margin: 5px
+            font-size: 22px
+            font-weight: 600
+            text-transform: uppercase
+            color: $regular-text
+            border: none
+            border-radius: 5px
+            background-color: transparent
+            cursor: pointer
+
+            &:hover
+                color: #fa6669
+            &:focus
+                color: #fa6669
+                box-shadow: 0px 0px 5px 1px #e02d2d
+
+            &--active
+                color: $primary-color
+
+    .posts
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+        margin: 0
+        padding: 0
+        min-height: 350px
+        list-style-type: none
+
+        &__link
+            position: relative
+            display: block
+            width: 300px
+            height: 300px
+            margin: 10px
+            border-radius: 5px
+            box-shadow: 0px 5px 15px #0000003b
+            transition: transform .5s ease
+            overflow: hidden
+            &:hover > .posts__image,
+            &:focus > .posts__image
+                transform: scale(1.2)
+
+        &__image
+            width: 100%
+            height: 100%
+            object-fit: contain
+            transition: .5s ease
+
+@media screen and ( max-width: 850px )
+    .portfolio--layout
+        .toggles
+            flex-wrap: wrap
+            &__button
+                flex-basis: auto
+
+@media screen and ( max-width: 540px )
+    .portfolio--layout
+        .portfolio__headline
+            font-size: 10vmin
+
+@media screen and ( max-width: 440px )
+    .portfolio--layout
+        .toggles
+            flex-direction: column
+            text-align: center
+
+// End of Portfolio
+
+// Team
+.team--layout
+    display: flex
+    flex-direction: column
+    padding-top: 110px
+    padding-bottom: 110px
+    @extend %container
+
+    .team__headline
+        @extend %heading
+
+    .team__text
+        @extend %section--text
+        max-width: 520px
+        width: 100%
+
+        &::after
+            @extend %section-line
+            left: 0
+
+.team-members-layout
+    display: flex
+    justify-content: space-between
+    margin-top: 70px
+
+    .team-images
+        position: relative
+        display: flex
+        flex-basis: auto
+        width: 350px
+        margin-right: 25px
+
+.team-images__member
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 5
+    display: none
+    width: 100%
+    height: 100%
+    border-radius: 5px
+    object-fit: cover
+    
+.team-members-main
+    display: flex
+    flex-direction: column
+    flex-basis: auto
+
+.members
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-basis: auto
+    padding: 0 10px
+    margin: 0
+    width: 100%
+    max-width: 880px
+    min-height: 200px
+    list-style-type: none
+    box-sizing: border-box
+
+    &__item
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        z-index: 5
+        display: none
+        margin: 0
+        padding: 0 10px
+        box-sizing: border-box
+        background-color: #fff
+
+    &__headline
+        margin-top: 10px
+        font-size: 30px
+        font-weight: 600
+        text-transform: uppercase
+        color: $complimentary-color
+
+    &__description
+        font-size: 16px
+        line-height: 28px
+        color: $regular-text
+
+.members-socials
+    display: flex
+    padding: 0
+    list-style-type: none
+
+    &__item
+        flex-basis: auto
+        margin: 5px
+    &__link
+        font-style: italic
+        text-decoration: none
+        font-weight: 300
+        color: $complimentary-color
+        transition: all .3s ease
+        &:hover,
+        &:focus
+            color: $primary-color
+            
+.team-members-toggles
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    flex-basis: auto
+    padding: 0
+    margin-bottom: 0
+    list-style-type: none
+
+    .team-member
+        display: flex
+        position: relative
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        flex-basis: auto
+        flex-wrap: wrap
+        margin: 5px 10px 0
+        border-radius: 5px
+        cursor: pointer
+        font-size: 18px
+        font-weight: 600
+        text-transform: uppercase
+        box-sizing: border-box
+        overflow: hidden
+        &:focus
+            box-shadow: 0 1px 5px $primary-color
+
+        &:hover .team-member__name,
+        &:focus .team-member__name
+            animation: membersName .5s ease forwards
+            filter: grayscale(100%)
+        &:hover .team-member__image,
+        &:focus .team-member__image
+            filter: grayscale(0%)
+
+        &__image
+            width: 200px
+            object-fit: cover
+            filter: grayscale(100%)
+
+        &__name
+            position: absolute
+            bottom: 0
+            left: 0
+            right: 0
+            margin: 0
+            padding: 10px
+            background-color: #252525dc
+            color: #fff
+            text-align: center
+            transform: translateY(70px)
+
+.team-members--active
+    position: relative
+    display: block
+    z-index: 10
+    
+@media ( min-width: 1004px ) and ( max-width: 1290px )
+    .team-members-layout
+        .team-images
+            width: 650px
+            
+
+    .team-members-toggles
+        max-width: 700px
+        .team-member
+            margin-top: 50px
+            flex-basis: calc( (100% / 2) - 70px )
+
+@media screen and ( max-width: 1003px )
+    .team-members-layout
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        .team-images
+            margin-bottom: 50px
+            margin-right: 0
+            width: 400px
+            height: 500px
+
+    .team-members-toggles
+        max-width: 100%
+        .team-member
+            margin-top: 20px
+    
+@media screen and ( max-width: 910px )
+    .team-members-layout
+        .team-images
+            display: none
+
+    .members
+        margin: 0 auto
+        max-width: 650px
+
+    .team-members-main
+        flex-direction: column-reverse
+
+    .team-members-toggles
+        margin-top: 0
+        margin-bottom: 50px
+        .team-member
+            flex-basis: auto
+            &__image
+                height: 220px
+    
+@media screen and ( max-width: 500px )
+    .team-members-layout
+        margin-top: 50px
+    .team-members-toggles
+        margin-bottom: 30px
+        .team-member
+            margin: 20px 5px 0
+            width: calc((100vw / 2 ) - 30px)
+            &__image
+                height: 100%
+                width: 100%
+                max-width: 200px
+
+    .members
+        padding: 0
+    .members__headline
+        margin-bottom: 10px
+        font-size: 24px
+    .members__description
+        font-size: 14px
+    .members-socials__link
+        font-size: 14px
+                
+@keyframes membersName
+    0%
+        transform: translateY(50px)
+    50%
+        transform: translateY(-20px)
+    100%
+        transform: translateY(0px)
+
+@media screen and ( max-width: 1200px )
+    .team--layout
+        .team__headline
+            text-align: center
+        .team__text
+            margin-right: auto
+            margin-left: auto
+            text-align: center
+            &::after
+                left: 50%
+                transform: translateX(-50%)
+
+@media screen and ( max-width: 540px )
+    .team--layout
+        .team__headline
+            font-size: 10vmin
+
+// End of Team
+
+// Subscribe
+.subscribe--layout
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 140px 15px
+    background: url('../images/subscribe-bg.jpg') center no-repeat
+    background-size: cover
+    text-align: center
+
+    .subscribe__headline
+        margin: 20px 0 42px
+        font-size: 42px
+        font-weight: 600
+        color: #ffffff
+        text-shadow: 0 1px 5px #0000005e
+
+        .subscribe__subheading
+            display: block
+            margin-top: 20px
+            font-size: 16px
+            font-weight: normal
+            line-height: 26px
+            color: #ffffffd2
+
+    .subscribe-form
+        display: flex
+        justify-content: center
+        align-items: center
+        max-width: 850px
+        width: 100%
+
+        &__item
+            position: relative
+            flex-basis: 520px
+            margin: 0 20px 0 0
+            max-width: 520px
+            width: 100%
+            height: 100%
+            box-sizing: border-box
+            
+        &__email
+            padding: 20px 15px
+            margin-bottom: 20px
+            width: 100%
+            height: 100%
+            font-size: 16px
+            color: $regular-text
+            border-radius: 5px
+            border: none
+            box-sizing: border-box
+            &:hover,
+            &:focus
+                background-color: #f8f5f5
+                outline: none
+                
+            &:focus
+                box-shadow: 0 0 4px 3px $primary-color
+        &__button
+            @extend %formButton
+            margin-bottom: 20px
+
+            &:focus,
+            &:hover
+                @extend %formButton--hover
+
+@media screen and ( max-width: 540px )
+    .team-layout
+        padding-bottom: 50px
+
+    .subscribe--layout
+        padding: 70px 15px
+
+        .subscribe__headline
+            font-size: 9vmin
+
+        .subscribe-form
+            flex-wrap: wrap
+
+            &__item
+                margin: 0
+
+            &__button
+                width: 100%
+
+// End of Subscribe
+
+// Contacts
+.contacts
+    @extend %container
+    padding-top: 110px
+    padding-bottom: 110px
+    height: 100%
+
+    &__headline
+        @extend %heading
+
+    &__text
+        @extend %section--text
+        max-width: 740px
+        width: 100%
+        margin-bottom: 70px
+
+        &::after
+            @extend %section-line
+            left: 0
+
+    &__content-layout
+        display: flex
+        justify-content: space-between
+        align-items: stretch
+        align-content: stretch
+        min-height: 463px
+        height: 400px
+
+    &-form
+        max-width: 740px
+        width: 100%
+
+        &__item
+            margin: 0
+
+        &__item--top
+            display: flex
+            justify-content: space-between
+            width: 100%
+
+        &__input
+            @extend %form-background
+            padding: 25px 50px
+            flex-basis: calc((50% / 2) - 5px)
+            flex-grow: 1
+            outline: none
+            &:hover
+                background-color: #dddddd
+            &:focus
+                background-color: #fff
+                box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2)
+
+        &__name
+            margin-right: 40px
+
+        &__user-message
+            @extend %form-background
+            margin: 45px 0
+            width: 100%
+            padding: 30px 50px
+            box-sizing: border-box
+            resize: none
+            outline: none
+            transition: all .3s ease
+            &:hover
+                background-color: #dddddd
+            &:focus
+                background-color: #fff
+                box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2)
+
+
+        &__button
+            @extend %formButton
+            width: 100%
+            // margin-bottom: 50px
+
+            &:focus,
+            &:hover
+                @extend %formButton--hover
+
+    &-info
+        position: relative
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: center
+        height: 100%
+        padding: 20px 15px 20px 70px
+        background-color: $complimentary-color
+        color: #ffffff
+        box-sizing: border-box
+
+        &__headline
+            position: relative
+            z-index: 2
+            margin-top: 0
+            font-size: 18px
+            font-weight: 700
+            line-height: 28px
+            text-transform: uppercase
+
+        &__list
+            position: relative
+            z-index: 2
+            padding: 0
+            margin: 0
+            font-size: 16px
+            line-height: 24px
+            list-style-type: none
+
+        &__item
+            margin: 20px 0
+
+        &__item:last-child
+            margin-bottom: 0
+
+        &__link
+            text-decoration: none
+            &:hover,
+            &:focus
+                color: $primary-color
+
+        &::after
+            z-index: 1
+            position: absolute
+            left: 0%
+            content: ''
+            height: 100%
+            width: 100vw
+            background-color: $complimentary-color
+
+@media screen and ( max-width: 1200px )
+    .contacts
+        &__headline
+            text-align: center
+        &__text
+            margin-right: auto
+            margin-left: auto
+            text-align: center
+            &::after
+                left: 50%
+                transform: translateX(-50%)
+
+        &__content-layout
+            flex-wrap: wrap
+            height: 100%
+
+        &-info,
+        &-form
+            flex-basis: auto
+            margin-right: auto
+            margin-left: auto
+
+        &-info
+            padding-top: 60px
+            padding-bottom: 60px
+            margin-top: 70px
+            max-width: 740px
+            width: 100%
+            border-radius: 5px
+            &::after
+                display: none
+
+@media screen and ( max-width: 620px )
+    .contacts
+        &__headline
+            font-size: 10vmin
+        &-form
+            &__item--top
+                flex-direction: column
+            &__name
+                margin-right: 0px
+                margin-bottom: 45px
+            &__input,
+            &__user-message
+                padding: 25px
+
+        &-info
+            padding: 60px  25px
+// End of Contacts
+
+// Footer section
+.footer--container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 40px
+    padding-bottom: 15px
+
+    .copyright
+        font-size: 16px
+        line-height: 26px
+
+        .fas
+            color: $primary-color
+
+.social-links
+    display: flex
+    justify-content: space-around
+    flex-basis: 200px
+    padding: 0
+    list-style-type: none
+
+    &__item
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 50%
+
+        .social-links__link
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 40px
+            height: 40px
+            border-radius: 50%
+            background: $text-white
+            font-size: 20px
+            color: $complimentary-color
+            text-decoration: none
+
+            &:hover,
+            &:focus
+                background-color: $primary-color
+                color: $text-white
+
+@media screen and ( max-width: 540px )
+    .footer--container
+        flex-direction: column
+        text-align: center
+    .social-links
+        flex-basis: auto
+        justify-content: center
+        width: 100%
+        &__item
+            margin: 0 5px
