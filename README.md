@@ -10,4 +10,4 @@ Hope, you will enjoy this site. Thanks!
 ## Links
 - [Link to GitHub Pages.](https://ereburg.github.io/websiteAgencyLanding/index.html)
 - [Reference / Image](http://css-web-templates.com/img_material/free-psd-agency-corporate-landing-page-template-1170-grid-bootstrap.jpg)
-- [Reference / PSD][http://psd-html-css.ru/templates/agnecy-lending-psd]
+- [Reference / PSD](http://psd-html-css.ru/templates/agnecy-lending-psd)
