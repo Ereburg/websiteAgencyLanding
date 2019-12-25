@@ -9,7 +9,7 @@ module.exports = function () {
             browser: "google chrome" // можете задать любой браузер
         });
         $.gulp.watch('./app/**/*.html', $.gulp.parallel('html')); // отслеживаем изменения, pug конвертирует, затем минифицируем и перебрасываем в dist
-        $.gulp.watch('./app/scss/**/*.scss', $.gulp.parallel('styles')); // стилевые изменения не релоадим, а стримим
+        $.gulp.watch('./app/scss/**/*.sass', $.gulp.parallel('styles')); // стилевые изменения не релоадим, а стримим
         $.gulp.watch('./app/scripts/**/*.js', $.gulp.parallel('scripts'));
         $.gulp.watch([
             './build/**/*.html',
