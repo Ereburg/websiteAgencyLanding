@@ -8,6 +8,6 @@ This is a test website. Agnecy based on pure HTML, Sass and a bit JS. Also you c
 Hope, you will enjoy this site. Thanks!
 
 ## Links
-- [Link to GitHub Pages.](https://ereburg.github.io/websiteAgencyLanding/index.html)
+- [Link to GitHub Pages.](https://ereburg.github.io/agnecy-lp/build/)
 - [Reference / Image](http://css-web-templates.com/img_material/free-psd-agency-corporate-landing-page-template-1170-grid-bootstrap.jpg)
 - [Reference / PSD](http://psd-html-css.ru/templates/agnecy-lending-psd)
