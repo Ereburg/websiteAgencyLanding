@@ -1,5 +1,6 @@
 {
   "name": "agnecy-lp",
+  "private": true,
   "version": "1.2.0",
   "description": "This is a test website. Agnecy based on pure HTML, Sass and a bit JS. Made by Ereburg",
   "main": "gulpfile.js",
@@ -9,8 +10,7 @@
   },
   "scripts": {
     "style:lint": "stylelint 'app/scss/**/*.scss' --syntax scss",
-    "style:fix": "stylelint 'app/scss/**/*.scss' --syntax scss --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "style:fix": "stylelint 'app/scss/**/*.scss' --syntax scss --fix"
   },
   "keywords": [
     "gulpplugin",
@@ -32,6 +32,7 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.7",
+    "gh-pages": "^3.2.3",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
@@ -46,6 +47,7 @@
     "gulp-terser": "^1.2.0",
     "gulp-tinypng-web": "^1.0.1",
     "gulp-webp": "^4.0.1",
+    "normalize.css": "^8.0.1",
     "stylelint": "^11.1.1",
     "stylelint-config-htmlacademy": "^0.1.4",
     "stylelint-config-rational-order": "^0.1.2",
